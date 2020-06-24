@@ -1,0 +1,255 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  height: 100vh;
+  /* overflow: hidden; */
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+h1 {
+  font-family: "Nanum Myeongjo", serif;
+  padding-top: 50px;
+  overflow: hidden;
+  text-align: center;
+}
+
+h1:before {
+  right: 0.5em;
+  margin-left: -50%;
+}
+h1:after {
+  left: 0.5em;
+  margin-right: -50%;
+}
+
+.sl-black:before,
+.sl-black:after {
+  background-color: #222;
+  content: "";
+  display: inline-block;
+  height: 1px;
+  position: relative;
+  vertical-align: middle;
+  width: 200px;
+}
+
+.sl-white:before,
+.sl-white:after {
+  background-color: #fff;
+  content: "";
+  display: inline-block;
+  height: 1px;
+  position: relative;
+  vertical-align: middle;
+  width: 200px;
+}
+
+h2 {
+  font-family: "Raleway Dots", cursive;
+  font-weight: bold;
+  padding-bottom: 40px;
+}
+
+.main {
+  height: 100vh;
+}
+
+.white {
+  color: #fff;
+}
+
+.navbar {
+  flex-wrap: nowrap !important;
+}
+
+.navbar-nav-left {
+  display: flex;
+  align-items: center;
+  order: 1;
+}
+
+.navbar-nav-right {
+  display: flex;
+  align-items: center;
+  order: 3;
+}
+
+.bg-custom {
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.img-logo {
+  font-family: "Nanum Myeongjo", serif;
+  display: flex;
+  justify-content: center;
+  order: 2;
+  width: 100%;
+  height: 100%;
+}
+
+.logo {
+  margin-left: 1rem;
+  margin-right: 0;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 100vw;
+  text-align: center;
+  align-content: center;
+}
+
+.bg-a {
+  height: 100vh;
+  background: url("./resources/img/mainBackground.jpg") center no-repeat;
+  background-size: cover;
+}
+
+.bg-b {
+  height: 100vh;
+  /* background: url("./resources/img/sectionC7.jpg") center no-repeat; */
+  background-size: cover;
+}
+
+.section-a {
+  top: 250px;
+  z-index: 2;
+  position: absolute;
+}
+
+.section-b {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  height: 500px;
+  width: 100%;
+  background-color: #fff;
+  z-index: 2;
+  position: relative;
+}
+
+.containar-items {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  width: 100%;
+  height: 100%;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.item {
+  width: 17%;
+  height: 50%;
+}
+
+.item-1 {
+  background: url(/resources/img/stack/nodejs.png) center no-repeat;
+  background-size: contain;
+}
+
+.item-2 {
+  background: url(/resources/img/stack/redux.png) center no-repeat;
+  background-size: contain;
+}
+
+.item-3 {
+  background: url(/resources/img/stack/react.png) center no-repeat;
+  background-size: contain;
+}
+
+.item-4 {
+  background: url(/resources/img/stack/mongodb.png) center no-repeat;
+  background-size: contain;
+}
+
+.item-5 {
+  background: url(/resources/img/stack/github.png) center no-repeat;
+  background-size: contain;
+}
+
+.item-6 {
+  background: url(/resources/img/stack/html5.png) center no-repeat;
+  background-size: contain;
+}
+
+.item-7 {
+  background: url(/resources/img/stack/bootstrap.png) center no-repeat;
+  background-size: contain;
+}
+
+.item-8 {
+  background: url(/resources/img/stack/ES6.png) center no-repeat;
+  background-size: contain;
+}
+
+.item-9 {
+  background: url(/resources/img/stack/sass.png) center no-repeat;
+  background-size: contain;
+}
+
+.item-10 {
+  background: url(/resources/img/stack/css.png) center no-repeat;
+  background-size: contain;
+}
+
+.section-c {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: 3.5%;
+  height: 600px;
+  width: 100%;
+  z-index: 2;
+  position: absolute;
+}
+
+/* .txt-box {
+  height: 100%;
+  width: 30%;
+  background-color: rgba(0, 0, 0, 0.5);
+} */
+
+.projects {
+  height: 100%;
+  width: 50%;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+/* .project {
+  height: 50%;
+  width: 33%;
+  background-color: red;
+} */
+
+.section-d {
+  height: 70vh;
+  justify-content: center;
+  z-index: 2;
+  background-color: #222;
+}
+
+.section-e {
+  height: 40vh;
+  justify-content: center;
+  z-index: 2;
+  background-color: #fff;
+  position: relative;
+}
+
+.btn-size {
+  width: 100px;
+  margin: 0 auto;
+}
