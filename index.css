@@ -1,3 +1,19 @@
+/* This only works with JavaScript, 
+		   if it's not present, don't show loader */
+.no-js #loader {
+  display: none;
+}
+.js #loader {
+  display: block;
+  position: absolute;
+  left: 100px;
+  top: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -22,41 +38,10 @@ h1 {
   text-align: center;
 }
 
-h1:before {
-  right: 0.5em;
-  margin-left: -50%;
-}
-h1:after {
-  left: 0.5em;
-  margin-right: -50%;
-}
-
-.sl-black:before,
-.sl-black:after {
-  background-color: #222;
-  content: "";
-  display: inline-block;
-  height: 1px;
-  position: relative;
-  vertical-align: middle;
-  width: 200px;
-}
-
-.sl-white:before,
-.sl-white:after {
-  background-color: #fff;
-  content: "";
-  display: inline-block;
-  height: 1px;
-  position: relative;
-  vertical-align: middle;
-  width: 200px;
-}
-
 h2 {
-  font-family: "Raleway Dots", cursive;
-  font-weight: bold;
+  font-weight: lighter;
   padding-bottom: 40px;
+  letter-spacing: 0.2rem;
 }
 
 .main {
@@ -65,6 +50,14 @@ h2 {
 
 .white {
   color: #fff;
+}
+
+.black {
+  color: #000;
+}
+
+.stack {
+  padding: 0;
 }
 
 .navbar {
@@ -116,12 +109,6 @@ h2 {
   background-size: cover;
 }
 
-.bg-b {
-  height: 100vh;
-  /* background: url("./resources/img/sectionC7.jpg") center no-repeat; */
-  background-size: cover;
-}
-
 .section-a {
   top: 250px;
   z-index: 2;
@@ -131,125 +118,362 @@ h2 {
 .section-b {
   display: flex;
   flex-wrap: nowrap;
-  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  align-self: center;
   height: 500px;
-  width: 100%;
+  width: 100vw;
   background-color: #fff;
   z-index: 2;
   position: relative;
+}
+
+.txt-box {
+  position: relative;
+  display: flex;
+  align-self: center;
+  height: 40vh;
+  width: 80vw;
+}
+
+.txt-box p {
+  align-self: flex-end;
+}
+
+#projects {
+  height: 56px;
+}
+
+#about {
+  height: 110px;
+}
+
+.projects {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+
+.project-main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+}
+
+.project {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  height: 30vh;
+  width: 30vw;
+}
+
+.project-1 {
+  background: url("./resources/img/Twitch.png") center no-repeat;
+  background-size: contain;
+}
+
+.project-1:hover {
+  opacity: 0.5;
+  transition: 0.5s;
+  color: rgba(0, 0, 0, 2);
+  text-decoration: none;
+}
+
+.project-2 {
+  background: url("./resources/img/messenger.png") center no-repeat;
+  background-size: contain;
+}
+
+.project-2:hover {
+  opacity: 0.5;
+  transition: 0.5s;
+  color: rgba(0, 0, 0, 1);
+  text-decoration: none;
+}
+
+.project-3 {
+  background: url("./resources/img/123Movies.png") center no-repeat;
+  background-size: contain;
+}
+.project-3:hover {
+  opacity: 0.5;
+  transition: 0.5s;
+  color: black;
+  text-decoration: none;
+}
+
+.project-txt {
+  position: relative;
+  color: black;
+  align-self: flex-end;
+  width: 30vw;
+  margin-top: 20px;
+}
+
+.project-txt p {
+  position: relative;
+  color: black;
+  align-self: flex-end;
+  font-size: 1rem;
+  font-weight: lighter;
+  width: 30vw;
+}
+
+.section-c {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-content: center;
+  align-self: center;
+  height: 350px;
+  width: 100vw;
+  z-index: 9;
+  /* position: relative; */
+}
+
+.ticker-section-1,
+.ticker-section-2 {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  align-self: center;
+  height: 350px;
+  width: 100vw;
+  position: absolute;
+  overflow: hidden;
 }
 
 .containar-items {
   display: flex;
   flex-wrap: nowrap;
   flex-direction: row;
-  width: 100%;
-  height: 100%;
-  justify-content: space-evenly;
+  width: 200%;
+  height: 200px;
+  justify-content: space-between;
   align-items: center;
+}
+
+.ticker-1 {
+  position: absolute;
+  animation: ticker-section-1 20s linear infinite;
+  transform: translate3d(0, 0, 0);
+}
+
+.ticker-2 {
+  position: absolute;
+  animation: ticker-section-2 20s linear infinite;
+  transform: translate3d(0, 0, 0);
+}
+
+@keyframes ticker-section-1 {
+  0% {
+    left: 0%;
+  }
+  100% {
+    left: -200%;
+  }
+}
+
+@keyframes ticker-section-2 {
+  0% {
+    left: 200%;
+  }
+  100% {
+    left: 0%;
+  }
 }
 
 .item {
   width: 17%;
   height: 50%;
+  margin: 0px 10px;
 }
 
 .item-1 {
-  background: url(/resources/img/stack/nodejs.png) center no-repeat;
+  background: url("./resources/img/stack/nodejs.png") center no-repeat;
   background-size: contain;
 }
 
 .item-2 {
-  background: url(/resources/img/stack/redux.png) center no-repeat;
+  background: url("./resources/img/stack/redux.png") center no-repeat;
   background-size: contain;
 }
 
 .item-3 {
-  background: url(/resources/img/stack/react.png) center no-repeat;
+  background: url("./resources/img/stack/react.png") center no-repeat;
   background-size: contain;
 }
 
 .item-4 {
-  background: url(/resources/img/stack/mongodb.png) center no-repeat;
+  background: url("./resources/img/stack/mongodb.png") center no-repeat;
   background-size: contain;
 }
 
 .item-5 {
-  background: url(/resources/img/stack/github.png) center no-repeat;
+  background: url("./resources/img/stack/github.png") center no-repeat;
   background-size: contain;
 }
 
 .item-6 {
-  background: url(/resources/img/stack/html5.png) center no-repeat;
+  background: url("./resources/img/stack/html5.png") center no-repeat;
   background-size: contain;
 }
 
 .item-7 {
-  background: url(/resources/img/stack/bootstrap.png) center no-repeat;
+  background: url("./resources/img/stack/bootstrap.png") center no-repeat;
   background-size: contain;
 }
 
 .item-8 {
-  background: url(/resources/img/stack/ES6.png) center no-repeat;
+  background: url("./resources/img/stack/ES6.png") center no-repeat;
   background-size: contain;
 }
 
 .item-9 {
-  background: url(/resources/img/stack/sass.png) center no-repeat;
+  background: url("./resources/img/stack/sass.png") center no-repeat;
   background-size: contain;
 }
 
 .item-10 {
-  background: url(/resources/img/stack/css.png) center no-repeat;
+  background: url("./resources/img/stack/css.png") center no-repeat;
   background-size: contain;
 }
 
-.section-c {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  margin-top: 3.5%;
-  height: 600px;
-  width: 100%;
-  z-index: 2;
-  position: absolute;
-}
-
-/* .txt-box {
-  height: 100%;
-  width: 30%;
-  background-color: rgba(0, 0, 0, 0.5);
-} */
-
-.projects {
-  height: 100%;
-  width: 50%;
-  background-color: rgba(0, 0, 0, 0);
-}
-
-/* .project {
-  height: 50%;
-  width: 33%;
-  background-color: red;
-} */
-
 .section-d {
-  height: 70vh;
-  justify-content: center;
+  justify-content: space-evenly;
+  width: 100vw;
+  height: 500px;
   z-index: 2;
-  background-color: #222;
+  background-color: #2e3438;
+  box-shadow: 0px 0px 20px;
 }
 
 .section-e {
-  height: 40vh;
+  display: flex;
   justify-content: center;
+  align-items: center;
+  height: 70px;
+  width: 100vw;
   z-index: 2;
   background-color: #fff;
   position: relative;
+  border-top: 1px solid #eee;
 }
 
 .btn-size {
   width: 100px;
   margin: 0 auto;
 }
+
+.about-txt {
+  align-self: center;
+  margin: 0 20px;
+  height: 50%;
+  width: 50%;
+}
+
+.about-img {
+  background: url("./resources/img/me.jpg") center no-repeat;
+  background-size: contain;
+  margin: 0 20px;
+  height: 80%;
+  width: 30%;
+}
+
+.btn-size-2 {
+  width: 150px;
+  height: 38px;
+  margin: 0 auto;
+  font-weight: 600;
+  letter-spacing: 0.1rem;
+}
+
+.linkedin {
+  font-size: 1.2rem;
+  color: #0177b5;
+  margin: 0 20px;
+}
+
+.github {
+  font-size: 1.2rem;
+  color: #313030;
+  margin: 0 20px;
+}
+
+.twitter {
+  font-size: 1.2rem;
+  color: #1e9deb;
+  margin: 0 20px;
+}
+
+.small-txt {
+  font-size: 1rem;
+  letter-spacing: 0.1rem;
+}
+
+.empty {
+  display: flex;
+  justify-content: flex-start;
+  align-self: center;
+  width: 33vw;
+  height: 5px;
+}
+
+.so-me {
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  width: 33vw;
+  padding-top: 10px;
+}
+
+.top {
+  display: flex;
+  justify-content: flex-end;
+  align-self: center;
+  width: 33vw;
+}
+
+.top-a {
+  font-weight: 500;
+  letter-spacing: 0.2rem;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  color: #888;
+  position: fixed;
+  bottom: 10px;
+  z-index: 99;
+}
+
+.top-a:hover {
+  background-color: rgba(225, 225, 225, 0.7);
+  color: #777;
+  transition: 0.5s;
+  border-radius: 5px 0px 0px 5px;
+}
+
+.nav-footer {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  width: 100vw;
+}
+
+.copyright {
+  width: 100%;
+  text-align: center;
+  align-self: center;
+}
+
+.no-margin {
+  margin: 0;
+}
+
+/* Ticker Tape */

@@ -10,7 +10,10 @@
       crossorigin="anonymous"
     />
     <link href="https://fonts.googleapis.com/css?family=Raleway+Dots&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
     <link rel="stylesheet" href="/index.css" />
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
+    <script src="https://github.com/Modernizr/Modernizr/raw/master/modernizr.js"></script>
     <title>CHRISTIANDUNCA</title>
   </head>
   <body>
@@ -34,25 +37,25 @@
           </div>
           
         <ul class="navbar-nav navbar-nav-left">
-          <li class="nav-item">
-            <a class="nav-link" href="/about-me">about</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/stack">stack</a>
-          </li>
           <li class="nav-item ">
-            <a class="nav-link" href="/projects">projects</a>
+            <a class="nav-link" href="#projects">projects</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#about">about</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#stack">stack</a>
           </li>
         </ul>
         <ul class="navbar-nav navbar-nav-right">
             <li class="nav-item">
-              <a class="nav-link" href="/linkedin">linkedin </a>
+              <a class="nav-link" href="https://www.linkedin.com/in/christian-d-dunca-288963106/" target="_blank">linkedin </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/github">github</a>
+              <a class="nav-link" href="https://github.com/christian89dunca" target="_blank">github</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/resume">résumé</a>
+              <a class="nav-link" href="/resources/pdf/CristianDDunca_Resume.pdf" target="_blank">résumé</a>
             </li>
           </ul>
           
@@ -65,67 +68,108 @@
     <div class="main">
         <div class="section section-a">
           <h1 class="white">Christian D. Dunca</h1>
-          <h2 class="white">Front-end Web Developer</h1>
-          <button type="button" class="btn btn-light btn-size">
-            about
-          </button>
+          <h2 class="white">Web Developer</h1>
+          <a href="#about" type="button" class="btn btn-light btn-size">
+            about me
+          </a>
         </div>
         <div class="bg-a rellax" data-rellax-speed="-4"></div>
       
-        <div class="section section-c">
-            <div class="projects"></div>
-            <div class="txt-box lax">
-                <p class="white">“I'm a testimonial. Click to edit me and add text that says something
-                    nice about you and your services.” Ella Davidson“I'm a testimonial. Click to edit me and add text that says something
-                    nice about you and your services.” Ella Davidson“I'm a testimonial. Click to edit me and add text that says something
-                    nice about you and your services.” Ella Davidson</p>
-            </div>
-            
-            <div class="project"></div>
-            <div class="project"></div>
-            <div class="project"></div>
-            <div class="project"></div>
-            <div class="project"></div>
-            <div class="project"></div>
-        </div>
-        <div class="bg-b rellax" data-rellax-speed="-4" data-rellax-percentage="0.5"></div>
-        
-        <div class="section section-b lax" data-lax-preset="">
-          <!-- <h1 class="side-line sl-black">stack</h1> -->
-          <div class="containar-items ticker lax" data-lax-opacity="0 1, 400 1, 0 0" >
-  
-              <div class="item item-1 lax" ></div>
-              <div class="item item-2 lax"  ></div>
-              <div class="item item-3 lax"  ></div>
-              <div class="item item-4 lax"  ></div>
-              <div class="item item-5 lax"  ></div>
-            
-              
+        <div id="projects"></div>
+        <div  class="section section-b rellax" data-rellax-speed="0" data-rellax-percentage="0">
+          
+          <div class="txt-box lax" data-lax-preset="fadeIn">
+              <p class="">We've all been there... wanting to work on projects that would make use of your newly learned skills. Ideally, create something completely new but you don't know where to start so you end up cloning other existing apps and putting your own mark on them. The projects below are just a few of such, under development projects.”</p>
           </div>
-          <div class="containar-items lax" data-lax-opacity="0 1, 600 1, 0 0">
+          <div class="projects lax" data-lax-preset="fadeIn" >
+            <div class="project-main">
+              <a class="project project-1" href="https://github.com/christian89dunca/twatch-streaming-service"></a>
+              <h5 class="project-txt">Twatch<br/><p>a clone of Twitch</h5>
+            </div>
+              <div class="project-main"> 
+                <a class="project project-2" href="https://github.com/christian89dunca/chat-app"></a>
+                <h5 class="project-txt">ChatApp<br/><p>a clone of Messenger</h5>
+              </div>
+              <div class="project-main">
+                <a class="project project-3" href="https://github.com/christian89dunca/movie-rental-project"></a>
+                <h5 class="project-txt">MovieRental<br/><p>a movie rental service</p></h5>
+              </div>
+          </div>
+    
+      </div>
+        
+      
+      
+      <div id="about"></div>
+      <div  class="section section-d" >
+        
+        <div class="about-txt">
+          <p class="white">
+            "I've always believed that determination, perseverance and hard work can take you where no natural talent can. I've learned that if it is to succeed, I have to put the effort others are not willing to put in."
+          </p>
+          <p class="white">
+            Connect with me on 
+            <a type="button" class="btn btn-light btn-size-2 " href="https://www.linkedin.com/in/christian-d-dunca-288963106/" target="_blank">Linked<i class="fab fa-linkedin linkedin no-margin"></i></a>
+          </p>
+        </div>
+        <div class="about-img"></div>
+      </div>
+
+      <div id="stack"></div>
+        <div class="section section-c lax "  data-lax-preset="fadeIn">
+
+          <div class="ticker-section-1">
+            <div class="containar-items ticker-1 lax"  data-lax-preset="fadeIn">
+                
+                <div class="item item-6 lax"  ></div>
+                <div class="item item-7 lax"  ></div>
+                <div class="item item-8 lax"  ></div>
+                <div class="item item-9 lax"  ></div>
+                <div class="item item-10 lax"  ></div>
+                <div class="item item-1 lax" ></div>
+                <div class="item item-2 lax"  ></div>
+                <div class="item item-3 lax"  ></div>
+                <div class="item item-4 lax"  ></div>
+                <div class="item item-5 lax"  ></div>
+            </div>
+
+          </div>
+
+          <div class="ticker-section-2">
+            <div class="containar-items ticker-2 lax"  data-lax-preset="fadeIn">
               <div class="item item-6 lax"  ></div>
               <div class="item item-7 lax"  ></div>
               <div class="item item-8 lax"  ></div>
               <div class="item item-9 lax"  ></div>
               <div class="item item-10 lax"  ></div>
+              <div class="item item-1 lax" ></div>
+              <div class="item item-2 lax"  ></div>
+              <div class="item item-3 lax"  ></div>
+              <div class="item item-4 lax"  ></div>
+              <div class="item item-5 lax"  ></div>
+            </div>
+
           </div>
           
         </div>
       
-      <div class="section section-d carousel" >
-        <p class="white">
-          “I'm a testimonial. Click to edit me and add text that says something
-          nice about you and your services.” Ella Davidson
-        </p>
-      </div>
-      <footer class="section section-e">
-        <h1 class="side-line sl-black">footer</h1>
-        
-        <ul>
-          <li>link</li>
-          <li>link</li>
-          <li>link</li>
-        </ul>
+      <footer class="section section-e " >
+        <div class="nav-footer">
+          <div class="empty"></div>
+          <div class="so-me">
+            <a href="https://www.linkedin.com/in/christian-d-dunca-288963106/"><i class="fab fa-linkedin linkedin"></i></a>
+            <a href="https://github.com/christian89dunca"><i class="fab fa-github github"></i></a>
+            <a href="https://twitter.com/ChristianDunca"><i class="fab fa-twitter twitter"></i></i></a>
+          </div>
+          <div class="empty"></div>
+        </div>
+        <div class="nav-footer">
+          <div class="empty"></div>
+          <div class="copyright">Copyright © christiandunca.com 2020</div>
+          <div class="top">
+            <a class="nav-link black top-a" href="#">Take me to Top</a>
+          </div>
+        </div>
       </footer>
     </div>
 
@@ -146,7 +190,7 @@
     ></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/rellax/1.12.1/rellax.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/lax.js" ></script>
-    <script src="index.js" ></script>
+    
     <script>
       var rellax = new Rellax(".rellax");
 
@@ -161,5 +205,7 @@
 	window.requestAnimationFrame(updateLax)
 }
     </script>
+    <script src="./index.js"></script>
+    
   </body>
 </html>
